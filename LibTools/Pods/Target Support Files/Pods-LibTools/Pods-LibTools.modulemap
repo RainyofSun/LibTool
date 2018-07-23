@@ -1,0 +1,6 @@
+framework module Pods_LibTools {
+  umbrella header "Pods-LibTools-umbrella.h"
+
+  export *
+  module * { export * }
+}
