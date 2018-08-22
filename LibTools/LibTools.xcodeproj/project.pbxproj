@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8090397212D12C400155D49 /* AppFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8090396212D12C400155D49 /* AppFileManager.m */; };
 		C815AFE420EF0D1000A1C5E5 /* AppPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C815AFE320EF0D1000A1C5E5 /* AppPopMenuView.m */; };
 		C82F3B6920E329EC003D5DFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B6820E329EC003D5DFE /* AppDelegate.m */; };
 		C82F3B6C20E329EC003D5DFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B6B20E329EC003D5DFE /* ViewController.m */; };
@@ -16,6 +17,8 @@
 		C82F3B7720E329EE003D5DFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B7620E329EE003D5DFE /* main.m */; };
 		C82F3B8220E32B67003D5DFE /* NetworkSpeed.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B8020E32B67003D5DFE /* NetworkSpeed.m */; };
 		C82F3B9620E3A205003D5DFE /* ElectricQuantityMonitoring.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B9520E3A205003D5DFE /* ElectricQuantityMonitoring.m */; };
+		C856502B212C051100397BB5 /* LRAppReplayKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C856502A212C051100397BB5 /* LRAppReplayKit.m */; };
+		C856502D212C0A7700397BB5 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C856502C212C0A7700397BB5 /* ReplayKit.framework */; };
 		DE4E6262C074CD019D804E8B /* Pods_LibTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245B46DA9FB1381A2DFBE4A4 /* Pods_LibTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,8 @@
 		245B46DA9FB1381A2DFBE4A4 /* Pods_LibTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F6A3BDA20924453EC626B9 /* Pods-LibTools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibTools.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibTools/Pods-LibTools.release.xcconfig"; sourceTree = "<group>"; };
 		AE8BCA44A7A8B3187D80F92E /* Pods-LibTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibTools/Pods-LibTools.debug.xcconfig"; sourceTree = "<group>"; };
+		C8090395212D12C400155D49 /* AppFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppFileManager.h; sourceTree = "<group>"; };
+		C8090396212D12C400155D49 /* AppFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppFileManager.m; sourceTree = "<group>"; };
 		C815AFE220EF0D1000A1C5E5 /* AppPopMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppPopMenuView.h; sourceTree = "<group>"; };
 		C815AFE320EF0D1000A1C5E5 /* AppPopMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppPopMenuView.m; sourceTree = "<group>"; };
 		C82F3B6420E329EC003D5DFE /* LibTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +44,9 @@
 		C82F3B8120E32B67003D5DFE /* NetworkSpeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSpeed.h; sourceTree = "<group>"; };
 		C82F3B9420E3A205003D5DFE /* ElectricQuantityMonitoring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElectricQuantityMonitoring.h; sourceTree = "<group>"; };
 		C82F3B9520E3A205003D5DFE /* ElectricQuantityMonitoring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElectricQuantityMonitoring.m; sourceTree = "<group>"; };
+		C8565029212C051100397BB5 /* LRAppReplayKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRAppReplayKit.h; sourceTree = "<group>"; };
+		C856502A212C051100397BB5 /* LRAppReplayKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRAppReplayKit.m; sourceTree = "<group>"; };
+		C856502C212C0A7700397BB5 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C856502D212C0A7700397BB5 /* ReplayKit.framework in Frameworks */,
 				DE4E6262C074CD019D804E8B /* Pods_LibTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +69,15 @@
 				85F6A3BDA20924453EC626B9 /* Pods-LibTools.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C8090394212D12B000155D49 /* AppFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				C8090395212D12C400155D49 /* AppFileManager.h */,
+				C8090396212D12C400155D49 /* AppFileManager.m */,
+			);
+			path = AppFileManager;
 			sourceTree = "<group>";
 		};
 		C815AFE120EF0CF300A1C5E5 /* AppPopMenu */ = {
@@ -109,6 +127,8 @@
 		C82F3B7D20E32A9D003D5DFE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C8090394212D12B000155D49 /* AppFileManager */,
+				C8565028212C04F600397BB5 /* APPReplayKit */,
 				C815AFE120EF0CF300A1C5E5 /* AppPopMenu */,
 				C82F3B7E20E32A9D003D5DFE /* AppFPSMonitoring */,
 				C82F3B7F20E32A9D003D5DFE /* AppElectricQuantityMonitoring */,
@@ -134,9 +154,19 @@
 			path = AppElectricQuantityMonitoring;
 			sourceTree = "<group>";
 		};
+		C8565028212C04F600397BB5 /* APPReplayKit */ = {
+			isa = PBXGroup;
+			children = (
+				C8565029212C051100397BB5 /* LRAppReplayKit.h */,
+				C856502A212C051100397BB5 /* LRAppReplayKit.m */,
+			);
+			path = APPReplayKit;
+			sourceTree = "<group>";
+		};
 		CF2CAE36623972747B1ED205 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C856502C212C0A7700397BB5 /* ReplayKit.framework */,
 				245B46DA9FB1381A2DFBE4A4 /* Pods_LibTools.framework */,
 			);
 			name = Frameworks;
@@ -253,12 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C856502B212C051100397BB5 /* LRAppReplayKit.m in Sources */,
 				C82F3B8220E32B67003D5DFE /* NetworkSpeed.m in Sources */,
 				C82F3B6C20E329EC003D5DFE /* ViewController.m in Sources */,
 				C82F3B9620E3A205003D5DFE /* ElectricQuantityMonitoring.m in Sources */,
 				C82F3B7720E329EE003D5DFE /* main.m in Sources */,
 				C82F3B6920E329EC003D5DFE /* AppDelegate.m in Sources */,
 				C815AFE420EF0D1000A1C5E5 /* AppPopMenuView.m in Sources */,
+				C8090397212D12C400155D49 /* AppFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HR7KN9336;
 				INFOPLIST_FILE = LibTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8HR7KN9336;
 				INFOPLIST_FILE = LibTools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -204,6 +204,10 @@ static NSString *cellIdentifier = @"menuCell";
     return self;
 }
 
+- (void)dealloc {
+    NSLog(@"释放了 %@",NSStringFromClass(self.class));
+}
+
 #pragma mark - UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.titleSource.count;
