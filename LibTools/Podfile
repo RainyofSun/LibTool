@@ -4,4 +4,7 @@ use_frameworks!
 
 target 'LibTools' do
   pod 'AFNetworking' 
+#  pod 'AsyncDisplayKit'
+  pod 'pop'
+  pod 'SCIndexView'
 end

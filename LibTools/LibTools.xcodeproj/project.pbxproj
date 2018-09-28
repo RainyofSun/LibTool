@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C8090397212D12C400155D49 /* AppFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8090396212D12C400155D49 /* AppFileManager.m */; };
+		C809039C212D395B00155D49 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C809039B212D395B00155D49 /* UIColor+Hex.m */; };
 		C815AFE420EF0D1000A1C5E5 /* AppPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C815AFE320EF0D1000A1C5E5 /* AppPopMenuView.m */; };
 		C82F3B6920E329EC003D5DFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B6820E329EC003D5DFE /* AppDelegate.m */; };
 		C82F3B6C20E329EC003D5DFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B6B20E329EC003D5DFE /* ViewController.m */; };
@@ -17,8 +18,14 @@
 		C82F3B7720E329EE003D5DFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B7620E329EE003D5DFE /* main.m */; };
 		C82F3B8220E32B67003D5DFE /* NetworkSpeed.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B8020E32B67003D5DFE /* NetworkSpeed.m */; };
 		C82F3B9620E3A205003D5DFE /* ElectricQuantityMonitoring.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B9520E3A205003D5DFE /* ElectricQuantityMonitoring.m */; };
+		C83121C8214A6D0300F54EE2 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83121C7214A6D0300F54EE2 /* CoreML.framework */; };
+		C841CD0F213CEAEC003CEF76 /* PopAnimationKitVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C841CD0D213CEAEC003CEF76 /* PopAnimationKitVC.m */; };
+		C841CD10213CEAEC003CEF76 /* PopAnimationKitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = C841CD0E213CEAEC003CEF76 /* PopAnimationKitVC.xib */; };
+		C84C607F215DD0FB00A8818E /* UIImage+AppImageClear.m in Sources */ = {isa = PBXBuildFile; fileRef = C84C607E215DD0FB00A8818E /* UIImage+AppImageClear.m */; };
 		C856502B212C051100397BB5 /* LRAppReplayKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C856502A212C051100397BB5 /* LRAppReplayKit.m */; };
 		C856502D212C0A7700397BB5 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C856502C212C0A7700397BB5 /* ReplayKit.framework */; };
+		C8E6A5EE214D17EF006CF6A6 /* APPTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E6A5ED214D17EF006CF6A6 /* APPTimer.m */; };
+		C8E6A5F2214DF9ED006CF6A6 /* AppAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E6A5F1214DF9ED006CF6A6 /* AppAlertView.m */; };
 		DE4E6262C074CD019D804E8B /* Pods_LibTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245B46DA9FB1381A2DFBE4A4 /* Pods_LibTools.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +35,8 @@
 		AE8BCA44A7A8B3187D80F92E /* Pods-LibTools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibTools.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibTools/Pods-LibTools.debug.xcconfig"; sourceTree = "<group>"; };
 		C8090395212D12C400155D49 /* AppFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppFileManager.h; sourceTree = "<group>"; };
 		C8090396212D12C400155D49 /* AppFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppFileManager.m; sourceTree = "<group>"; };
+		C809039A212D395B00155D49 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		C809039B212D395B00155D49 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		C815AFE220EF0D1000A1C5E5 /* AppPopMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppPopMenuView.h; sourceTree = "<group>"; };
 		C815AFE320EF0D1000A1C5E5 /* AppPopMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppPopMenuView.m; sourceTree = "<group>"; };
 		C82F3B6420E329EC003D5DFE /* LibTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,9 +53,19 @@
 		C82F3B8120E32B67003D5DFE /* NetworkSpeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkSpeed.h; sourceTree = "<group>"; };
 		C82F3B9420E3A205003D5DFE /* ElectricQuantityMonitoring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ElectricQuantityMonitoring.h; sourceTree = "<group>"; };
 		C82F3B9520E3A205003D5DFE /* ElectricQuantityMonitoring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElectricQuantityMonitoring.m; sourceTree = "<group>"; };
+		C83121C7214A6D0300F54EE2 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		C841CD0C213CEAEC003CEF76 /* PopAnimationKitVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopAnimationKitVC.h; sourceTree = "<group>"; };
+		C841CD0D213CEAEC003CEF76 /* PopAnimationKitVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopAnimationKitVC.m; sourceTree = "<group>"; };
+		C841CD0E213CEAEC003CEF76 /* PopAnimationKitVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopAnimationKitVC.xib; sourceTree = "<group>"; };
+		C84C607D215DD0FB00A8818E /* UIImage+AppImageClear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+AppImageClear.h"; sourceTree = "<group>"; };
+		C84C607E215DD0FB00A8818E /* UIImage+AppImageClear.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AppImageClear.m"; sourceTree = "<group>"; };
 		C8565029212C051100397BB5 /* LRAppReplayKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRAppReplayKit.h; sourceTree = "<group>"; };
 		C856502A212C051100397BB5 /* LRAppReplayKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRAppReplayKit.m; sourceTree = "<group>"; };
 		C856502C212C0A7700397BB5 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		C8E6A5EC214D17EF006CF6A6 /* APPTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPTimer.h; sourceTree = "<group>"; };
+		C8E6A5ED214D17EF006CF6A6 /* APPTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPTimer.m; sourceTree = "<group>"; };
+		C8E6A5F0214DF9ED006CF6A6 /* AppAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppAlertView.h; sourceTree = "<group>"; };
+		C8E6A5F1214DF9ED006CF6A6 /* AppAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83121C8214A6D0300F54EE2 /* CoreML.framework in Frameworks */,
 				C856502D212C0A7700397BB5 /* ReplayKit.framework in Frameworks */,
 				DE4E6262C074CD019D804E8B /* Pods_LibTools.framework in Frameworks */,
 			);
@@ -78,6 +98,24 @@
 				C8090396212D12C400155D49 /* AppFileManager.m */,
 			);
 			path = AppFileManager;
+			sourceTree = "<group>";
+		};
+		C8090398212D392100155D49 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C84C607C215DD0D600A8818E /* UIImage */,
+				C8090399212D393C00155D49 /* UIColor */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C8090399212D393C00155D49 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C809039A212D395B00155D49 /* UIColor+Hex.h */,
+				C809039B212D395B00155D49 /* UIColor+Hex.m */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 		C815AFE120EF0CF300A1C5E5 /* AppPopMenu */ = {
@@ -110,6 +148,8 @@
 		C82F3B6620E329EC003D5DFE /* LibTools */ = {
 			isa = PBXGroup;
 			children = (
+				C841CD0B213CEAC8003CEF76 /* PopAnimationKitVC */,
+				C8090398212D392100155D49 /* Category */,
 				C82F3B7D20E32A9D003D5DFE /* Tools */,
 				C82F3B6720E329EC003D5DFE /* AppDelegate.h */,
 				C82F3B6820E329EC003D5DFE /* AppDelegate.m */,
@@ -127,6 +167,8 @@
 		C82F3B7D20E32A9D003D5DFE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C8E6A5EF214DF9DA006CF6A6 /* AppAlertView */,
+				C8E6A5EB214D17C3006CF6A6 /* AppTimer */,
 				C8090394212D12B000155D49 /* AppFileManager */,
 				C8565028212C04F600397BB5 /* APPReplayKit */,
 				C815AFE120EF0CF300A1C5E5 /* AppPopMenu */,
@@ -154,6 +196,25 @@
 			path = AppElectricQuantityMonitoring;
 			sourceTree = "<group>";
 		};
+		C841CD0B213CEAC8003CEF76 /* PopAnimationKitVC */ = {
+			isa = PBXGroup;
+			children = (
+				C841CD0C213CEAEC003CEF76 /* PopAnimationKitVC.h */,
+				C841CD0D213CEAEC003CEF76 /* PopAnimationKitVC.m */,
+				C841CD0E213CEAEC003CEF76 /* PopAnimationKitVC.xib */,
+			);
+			path = PopAnimationKitVC;
+			sourceTree = "<group>";
+		};
+		C84C607C215DD0D600A8818E /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				C84C607D215DD0FB00A8818E /* UIImage+AppImageClear.h */,
+				C84C607E215DD0FB00A8818E /* UIImage+AppImageClear.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		C8565028212C04F600397BB5 /* APPReplayKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,9 +224,28 @@
 			path = APPReplayKit;
 			sourceTree = "<group>";
 		};
+		C8E6A5EB214D17C3006CF6A6 /* AppTimer */ = {
+			isa = PBXGroup;
+			children = (
+				C8E6A5EC214D17EF006CF6A6 /* APPTimer.h */,
+				C8E6A5ED214D17EF006CF6A6 /* APPTimer.m */,
+			);
+			path = AppTimer;
+			sourceTree = "<group>";
+		};
+		C8E6A5EF214DF9DA006CF6A6 /* AppAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				C8E6A5F0214DF9ED006CF6A6 /* AppAlertView.h */,
+				C8E6A5F1214DF9ED006CF6A6 /* AppAlertView.m */,
+			);
+			path = AppAlertView;
+			sourceTree = "<group>";
+		};
 		CF2CAE36623972747B1ED205 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C83121C7214A6D0300F54EE2 /* CoreML.framework */,
 				C856502C212C0A7700397BB5 /* ReplayKit.framework */,
 				245B46DA9FB1381A2DFBE4A4 /* Pods_LibTools.framework */,
 			);
@@ -233,6 +313,7 @@
 			files = (
 				C82F3B7420E329EE003D5DFE /* LaunchScreen.storyboard in Resources */,
 				C82F3B7120E329EE003D5DFE /* Assets.xcassets in Resources */,
+				C841CD10213CEAEC003CEF76 /* PopAnimationKitVC.xib in Resources */,
 				C82F3B6F20E329ED003D5DFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,10 +347,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LibTools/Pods-LibTools-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/SCIndexView/SCIndexView.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCIndexView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -284,9 +369,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C856502B212C051100397BB5 /* LRAppReplayKit.m in Sources */,
+				C8E6A5F2214DF9ED006CF6A6 /* AppAlertView.m in Sources */,
 				C82F3B8220E32B67003D5DFE /* NetworkSpeed.m in Sources */,
+				C841CD0F213CEAEC003CEF76 /* PopAnimationKitVC.m in Sources */,
+				C84C607F215DD0FB00A8818E /* UIImage+AppImageClear.m in Sources */,
 				C82F3B6C20E329EC003D5DFE /* ViewController.m in Sources */,
+				C8E6A5EE214D17EF006CF6A6 /* APPTimer.m in Sources */,
 				C82F3B9620E3A205003D5DFE /* ElectricQuantityMonitoring.m in Sources */,
+				C809039C212D395B00155D49 /* UIColor+Hex.m in Sources */,
 				C82F3B7720E329EE003D5DFE /* main.m in Sources */,
 				C82F3B6920E329EC003D5DFE /* AppDelegate.m in Sources */,
 				C815AFE420EF0D1000A1C5E5 /* AppPopMenuView.m in Sources */,

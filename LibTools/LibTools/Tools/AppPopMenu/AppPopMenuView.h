@@ -11,6 +11,7 @@
 @class AppPopMenuView;
 @protocol AppPopMenuViewDelegate<NSObject>
 
+@optional;
 ///
 - (void)lrPopupMenuBeganDismiss;
 ///

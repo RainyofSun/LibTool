@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "AppPopMenuView.h"
 #import "LRAppReplayKit.h"
+#import "PopAnimationKitVC.h"
+#import "APPTimer.h"
+#import "UIImage+AppImageClear.h"
 
 @interface ViewController ()<AppPopMenuViewDelegate>
 {
@@ -23,23 +26,13 @@
 
 @implementation ViewController
 
-- (void)timer {
-    lable = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 80, 40)];
-    lable.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:lable];
-
-    max = 30;
-
-    __block NSInteger num = 0;
-    timeQueue = dispatch_queue_create("time", DISPATCH_QUEUE_SERIAL);
-    timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, timeQueue);
-    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, 0.2 * NSEC_PER_SEC, 0 * NSEC_PER_SEC);
-    dispatch_source_set_event_handler(timer, ^{
-        num ++;
-        NSLog(@"开启定时器");
-    });
-    dispatch_resume(timer);
-    [self popMenu];
+- (void)viewDidLoad {
+    [super viewDidLoad];
+//    [self popMenu];
+//    [self replayKit];
+//    [self popAnimationKit];
+//    [self SingleTimer];
+    [self clearImg];
 }
 
 - (void)popMenu {
@@ -52,21 +45,41 @@
 
 - (void)click {
     [AppPopMenuView showWithReplayView:btn titles:@[@"吃饭啦",@"吃饭啦",@"吃饭啦",@"吃饭啦",@"吃饭啦",@"吃饭啦",@"吃饭啦"] menuWidth:btn.bounds.size.width delegate:self];
-    dispatch_suspend(timer);
 }
 
 - (void)lrPopupMenuDidSelectedAtIndex:(NSInteger)index lrPopupMenu:(AppPopMenuView *)lrPopupMenu {
-    NSLog(@"%ld",index);
-    dispatch_resume(timer);
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self replayKit];
+    NSLog(@"%ld",(long)index);
 }
 
 - (void)replayKit {
     
+}
+
+- (void)popAnimationKit {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[PopAnimationKitVC alloc] init]];
+        [self presentViewController:nav animated:YES completion:nil];
+    });
+}
+
+- (void)SingleTimer {
+    [[APPTimer sharedAPPTimer] starTimer];
+    [[APPTimer sharedAPPTimer] addTimerObserve:self block:^{
+        NSLog(@"吃饭了");
+    }];
+}
+
+- (void)clearImg {
+    UIImage *image = [UIImage imageNamed:@"1024"];
+    
+    UIImageView *imageView_1 = [[UIImageView alloc] initWithImage:image];
+    imageView_1.frame = CGRectMake(100, 100, 200, 200);
+    
+    UIImageView *imageview_2 = [[UIImageView alloc] initWithImage:image.imageToTransparent];
+    imageview_2.frame = CGRectMake(100, 350, 200, 200);
+    
+    [self.view addSubview:imageView_1];
+    [self.view addSubview:imageview_2];
 }
 
 - (void)didReceiveMemoryWarning {
