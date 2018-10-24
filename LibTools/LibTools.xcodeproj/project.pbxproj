@@ -24,6 +24,9 @@
 		C84C607F215DD0FB00A8818E /* UIImage+AppImageClear.m in Sources */ = {isa = PBXBuildFile; fileRef = C84C607E215DD0FB00A8818E /* UIImage+AppImageClear.m */; };
 		C856502B212C051100397BB5 /* LRAppReplayKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C856502A212C051100397BB5 /* LRAppReplayKit.m */; };
 		C856502D212C0A7700397BB5 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C856502C212C0A7700397BB5 /* ReplayKit.framework */; };
+		C8D6670B2176DDEC008D3B7E /* AppCycleScrollview.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6670A2176DDEC008D3B7E /* AppCycleScrollview.m */; };
+		C8D6670E2176DF1E008D3B7E /* AppCycleScrollviewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6670D2176DF1E008D3B7E /* AppCycleScrollviewFlowLayout.m */; };
+		C8D667112176DFEE008D3B7E /* AppCycleCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D667102176DFEE008D3B7E /* AppCycleCollectionViewCell.m */; };
 		C8E6A5EE214D17EF006CF6A6 /* APPTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E6A5ED214D17EF006CF6A6 /* APPTimer.m */; };
 		C8E6A5F2214DF9ED006CF6A6 /* AppAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8E6A5F1214DF9ED006CF6A6 /* AppAlertView.m */; };
 		DE4E6262C074CD019D804E8B /* Pods_LibTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 245B46DA9FB1381A2DFBE4A4 /* Pods_LibTools.framework */; };
@@ -62,6 +65,12 @@
 		C8565029212C051100397BB5 /* LRAppReplayKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRAppReplayKit.h; sourceTree = "<group>"; };
 		C856502A212C051100397BB5 /* LRAppReplayKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRAppReplayKit.m; sourceTree = "<group>"; };
 		C856502C212C0A7700397BB5 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		C8D667092176DDEC008D3B7E /* AppCycleScrollview.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCycleScrollview.h; sourceTree = "<group>"; };
+		C8D6670A2176DDEC008D3B7E /* AppCycleScrollview.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCycleScrollview.m; sourceTree = "<group>"; };
+		C8D6670C2176DF1E008D3B7E /* AppCycleScrollviewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCycleScrollviewFlowLayout.h; sourceTree = "<group>"; };
+		C8D6670D2176DF1E008D3B7E /* AppCycleScrollviewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCycleScrollviewFlowLayout.m; sourceTree = "<group>"; };
+		C8D6670F2176DFEE008D3B7E /* AppCycleCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppCycleCollectionViewCell.h; sourceTree = "<group>"; };
+		C8D667102176DFEE008D3B7E /* AppCycleCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppCycleCollectionViewCell.m; sourceTree = "<group>"; };
 		C8E6A5EC214D17EF006CF6A6 /* APPTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPTimer.h; sourceTree = "<group>"; };
 		C8E6A5ED214D17EF006CF6A6 /* APPTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPTimer.m; sourceTree = "<group>"; };
 		C8E6A5F0214DF9ED006CF6A6 /* AppAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppAlertView.h; sourceTree = "<group>"; };
@@ -167,6 +176,7 @@
 		C82F3B7D20E32A9D003D5DFE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C8D667082176DCE5008D3B7E /* APPLoopPage */,
 				C8E6A5EF214DF9DA006CF6A6 /* AppAlertView */,
 				C8E6A5EB214D17C3006CF6A6 /* AppTimer */,
 				C8090394212D12B000155D49 /* AppFileManager */,
@@ -222,6 +232,19 @@
 				C856502A212C051100397BB5 /* LRAppReplayKit.m */,
 			);
 			path = APPReplayKit;
+			sourceTree = "<group>";
+		};
+		C8D667082176DCE5008D3B7E /* APPLoopPage */ = {
+			isa = PBXGroup;
+			children = (
+				C8D667092176DDEC008D3B7E /* AppCycleScrollview.h */,
+				C8D6670A2176DDEC008D3B7E /* AppCycleScrollview.m */,
+				C8D6670C2176DF1E008D3B7E /* AppCycleScrollviewFlowLayout.h */,
+				C8D6670D2176DF1E008D3B7E /* AppCycleScrollviewFlowLayout.m */,
+				C8D6670F2176DFEE008D3B7E /* AppCycleCollectionViewCell.h */,
+				C8D667102176DFEE008D3B7E /* AppCycleCollectionViewCell.m */,
+			);
+			path = APPLoopPage;
 			sourceTree = "<group>";
 		};
 		C8E6A5EB214D17C3006CF6A6 /* AppTimer */ = {
@@ -371,16 +394,19 @@
 				C856502B212C051100397BB5 /* LRAppReplayKit.m in Sources */,
 				C8E6A5F2214DF9ED006CF6A6 /* AppAlertView.m in Sources */,
 				C82F3B8220E32B67003D5DFE /* NetworkSpeed.m in Sources */,
+				C8D6670E2176DF1E008D3B7E /* AppCycleScrollviewFlowLayout.m in Sources */,
 				C841CD0F213CEAEC003CEF76 /* PopAnimationKitVC.m in Sources */,
 				C84C607F215DD0FB00A8818E /* UIImage+AppImageClear.m in Sources */,
 				C82F3B6C20E329EC003D5DFE /* ViewController.m in Sources */,
 				C8E6A5EE214D17EF006CF6A6 /* APPTimer.m in Sources */,
 				C82F3B9620E3A205003D5DFE /* ElectricQuantityMonitoring.m in Sources */,
+				C8D6670B2176DDEC008D3B7E /* AppCycleScrollview.m in Sources */,
 				C809039C212D395B00155D49 /* UIColor+Hex.m in Sources */,
 				C82F3B7720E329EE003D5DFE /* main.m in Sources */,
 				C82F3B6920E329EC003D5DFE /* AppDelegate.m in Sources */,
 				C815AFE420EF0D1000A1C5E5 /* AppPopMenuView.m in Sources */,
 				C8090397212D12C400155D49 /* AppFileManager.m in Sources */,
+				C8D667112176DFEE008D3B7E /* AppCycleCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
