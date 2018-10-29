@@ -96,10 +96,9 @@
     self.recordView = [[AppRecordView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
     self.view.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.recordView];
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    self.fakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(onFakeTimerTimeOut) userInfo:nil repeats:YES];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.fakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(onFakeTimerTimeOut) userInfo:nil repeats:YES];
+    });
 }
 
 - (void)onFakeTimerTimeOut {
