@@ -14,6 +14,8 @@
 
 /** imageRecord */
 @property (nonatomic,strong) UIImageView *imageRecord;
+/** lbContent */
+@property (nonatomic,strong) UILabel *lbContent;
 /** powerView */
 @property (nonatomic,strong) AppRecordAnimationView *powerView;
 
@@ -21,15 +23,12 @@
 
 @implementation AppRecordView
 
--(instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]) {
-        
-    }
-    return self;
-}
-
 - (void)updateWithPower:(float)power {
     [self.powerView updateAudioPower:power];
+}
+
+- (void)updateWithText:(NSString *)newText {
+    self.lbContent.text = newText;
 }
 
 - (void)layoutSubviews {
@@ -42,8 +41,9 @@
     
     [self addSubview:self.imageRecord];
     [self addSubview:self.powerView];
+    [self addSubview:self.lbContent];
     
-    [self.imageRecord autoPinEdge:ALEdgeLeading toEdge:ALEdgeLeading ofView:self withOffset:40];
+    [self.imageRecord autoAlignAxis:ALAxisVertical toSameAxisOfView:self withOffset:-10];
     [self.imageRecord autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self withOffset:30];
     [self.imageRecord autoSetDimensionsToSize:_imageRecord.image.size];
     
@@ -52,8 +52,15 @@
     [self.powerView autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:self.imageRecord withOffset:4];
     [self.powerView autoSetDimensionsToSize:powerSize];
     
+    [self.lbContent autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self withOffset:3];
+    [self.lbContent autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self withOffset:3];
+    [self.lbContent autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.powerView withOffset:8];
+    
     self.powerView.originSize = powerSize;
     [self.powerView updateAudioPower:0];
+    
+    self.layer.cornerRadius = 10.f;
+    self.clipsToBounds = YES;
 }
 
 #pragma mark - setter
@@ -71,6 +78,19 @@
         _powerView.backgroundColor = [UIColor clearColor];
     }
     return _powerView;
+}
+
+- (UILabel *)lbContent {
+    if (!_lbContent) {
+        _lbContent = [[UILabel alloc] init];
+        _lbContent.backgroundColor = [UIColor clearColor];
+        _lbContent.textColor = [UIColor whiteColor];
+        _lbContent.font = [UIFont systemFontOfSize:14];
+        _lbContent.numberOfLines = 4;
+        _lbContent.lineBreakMode = NSLineBreakByTruncatingMiddle;
+        _lbContent.text = @"i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you ";
+    }
+    return _lbContent;
 }
 
 @end

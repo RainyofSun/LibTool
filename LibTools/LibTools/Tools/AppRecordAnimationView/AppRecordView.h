@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 更新音频能量
 - (void)updateWithPower:(float)power;
+/// 更新文字
+- (void)updateWithText:(NSString *)newText;
 
 @end
 
