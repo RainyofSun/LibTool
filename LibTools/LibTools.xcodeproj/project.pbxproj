@@ -10,6 +10,8 @@
 		C8090397212D12C400155D49 /* AppFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8090396212D12C400155D49 /* AppFileManager.m */; };
 		C809039C212D395B00155D49 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C809039B212D395B00155D49 /* UIColor+Hex.m */; };
 		C815AFE420EF0D1000A1C5E5 /* AppPopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C815AFE320EF0D1000A1C5E5 /* AppPopMenuView.m */; };
+		C82B8DB92186BD840034FFA7 /* AppRecordAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C82B8DB82186BD840034FFA7 /* AppRecordAnimationView.m */; };
+		C82B8DBC2186DBBC0034FFA7 /* AppRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = C82B8DBB2186DBBC0034FFA7 /* AppRecordView.m */; };
 		C82F3B6920E329EC003D5DFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B6820E329EC003D5DFE /* AppDelegate.m */; };
 		C82F3B6C20E329EC003D5DFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82F3B6B20E329EC003D5DFE /* ViewController.m */; };
 		C82F3B6F20E329ED003D5DFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C82F3B6D20E329ED003D5DFE /* Main.storyboard */; };
@@ -42,6 +44,10 @@
 		C809039B212D395B00155D49 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		C815AFE220EF0D1000A1C5E5 /* AppPopMenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppPopMenuView.h; sourceTree = "<group>"; };
 		C815AFE320EF0D1000A1C5E5 /* AppPopMenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppPopMenuView.m; sourceTree = "<group>"; };
+		C82B8DB72186BD840034FFA7 /* AppRecordAnimationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRecordAnimationView.h; sourceTree = "<group>"; };
+		C82B8DB82186BD840034FFA7 /* AppRecordAnimationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppRecordAnimationView.m; sourceTree = "<group>"; };
+		C82B8DBA2186DBBC0034FFA7 /* AppRecordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppRecordView.h; sourceTree = "<group>"; };
+		C82B8DBB2186DBBC0034FFA7 /* AppRecordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppRecordView.m; sourceTree = "<group>"; };
 		C82F3B6420E329EC003D5DFE /* LibTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C82F3B6720E329EC003D5DFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C82F3B6820E329EC003D5DFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,6 +142,17 @@
 			path = AppPopMenu;
 			sourceTree = "<group>";
 		};
+		C82B8DB62186BD700034FFA7 /* AppRecordAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				C82B8DB72186BD840034FFA7 /* AppRecordAnimationView.h */,
+				C82B8DB82186BD840034FFA7 /* AppRecordAnimationView.m */,
+				C82B8DBA2186DBBC0034FFA7 /* AppRecordView.h */,
+				C82B8DBB2186DBBC0034FFA7 /* AppRecordView.m */,
+			);
+			path = AppRecordAnimationView;
+			sourceTree = "<group>";
+		};
 		C82F3B5B20E329EC003D5DFE = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +193,7 @@
 		C82F3B7D20E32A9D003D5DFE /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C82B8DB62186BD700034FFA7 /* AppRecordAnimationView */,
 				C8D667082176DCE5008D3B7E /* APPLoopPage */,
 				C8E6A5EF214DF9DA006CF6A6 /* AppAlertView */,
 				C8E6A5EB214D17C3006CF6A6 /* AppTimer */,
@@ -370,12 +388,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LibTools/Pods-LibTools-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SCIndexView/SCIndexView.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCIndexView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
@@ -402,9 +422,11 @@
 				C82F3B9620E3A205003D5DFE /* ElectricQuantityMonitoring.m in Sources */,
 				C8D6670B2176DDEC008D3B7E /* AppCycleScrollview.m in Sources */,
 				C809039C212D395B00155D49 /* UIColor+Hex.m in Sources */,
+				C82B8DBC2186DBBC0034FFA7 /* AppRecordView.m in Sources */,
 				C82F3B7720E329EE003D5DFE /* main.m in Sources */,
 				C82F3B6920E329EC003D5DFE /* AppDelegate.m in Sources */,
 				C815AFE420EF0D1000A1C5E5 /* AppPopMenuView.m in Sources */,
+				C82B8DB92186BD840034FFA7 /* AppRecordAnimationView.m in Sources */,
 				C8090397212D12C400155D49 /* AppFileManager.m in Sources */,
 				C8D667112176DFEE008D3B7E /* AppCycleCollectionViewCell.m in Sources */,
 			);
@@ -551,10 +573,7 @@
 				DEVELOPMENT_TEAM = 8HR7KN9336;
 				INFOPLIST_FILE = LibTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LRCY.LibTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -570,10 +589,7 @@
 				DEVELOPMENT_TEAM = 8HR7KN9336;
 				INFOPLIST_FILE = LibTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = LRCY.LibTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

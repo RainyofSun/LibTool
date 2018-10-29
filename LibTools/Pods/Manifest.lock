@@ -15,24 +15,28 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - pop (1.0.10)
+  - PureLayout (3.1.2)
   - SCIndexView (2.1.1)
 
 DEPENDENCIES:
   - AFNetworking
   - pop
+  - PureLayout
   - SCIndexView
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - pop
+    - PureLayout
     - SCIndexView
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  PureLayout: 4634d0b61e3b5021166e8ec7c18e9e0ca0720c8b
   SCIndexView: b68cded2054ddf3000cdaa56f17627dfb1041c78
 
-PODFILE CHECKSUM: 4044c1a774ecee5ca1ca2bcb2eb6dd89ebfc24d8
+PODFILE CHECKSUM: e889a766f04845cd1372a491e474608f94d96315
 
 COCOAPODS: 1.5.0

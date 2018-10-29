@@ -12,6 +12,8 @@
 #import "PopAnimationKitVC.h"
 #import "APPTimer.h"
 #import "UIImage+AppImageClear.h"
+#import "AppRecordAnimationView.h"
+#import "AppRecordView.h"
 
 @interface ViewController ()<AppPopMenuViewDelegate>
 {
@@ -22,6 +24,13 @@
     AppPopMenuView *menuView;
     UIButton *btn;
 }
+/** animationView */
+@property (nonatomic,strong) AppRecordAnimationView *animationView;
+/** recordView */
+@property (nonatomic,strong) AppRecordView *recordView;
+/** fakeTimer */
+@property (nonatomic,strong) NSTimer *fakeTimer;
+
 @end
 
 @implementation ViewController
@@ -32,7 +41,8 @@
 //    [self replayKit];
 //    [self popAnimationKit];
 //    [self SingleTimer];
-    [self clearImg];
+//    [self clearImg];
+    [self recordAnimation];
 }
 
 - (void)popMenu {
@@ -80,6 +90,23 @@
     
     [self.view addSubview:imageView_1];
     [self.view addSubview:imageview_2];
+}
+
+- (void)recordAnimation {
+    self.recordView = [[AppRecordView alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:self.recordView];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.fakeTimer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(onFakeTimerTimeOut) userInfo:nil repeats:YES];
+}
+
+- (void)onFakeTimerTimeOut {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        float fakePower = (float)(1+arc4random()%99)/100;
+        [self.recordView updateWithPower:fakePower];
+    });
 }
 
 - (void)didReceiveMemoryWarning {

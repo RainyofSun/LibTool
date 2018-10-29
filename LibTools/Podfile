@@ -7,4 +7,5 @@ target 'LibTools' do
 #  pod 'AsyncDisplayKit'
   pod 'pop'
   pod 'SCIndexView'
+  pod 'PureLayout'
 end

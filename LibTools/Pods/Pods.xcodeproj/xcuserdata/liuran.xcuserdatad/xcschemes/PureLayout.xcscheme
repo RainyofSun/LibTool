@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8DE47DED43E0C0DB884E20A7AEE84136"
-               BlueprintName = "SCIndexView"
+               BlueprintIdentifier = "2EF73A60A36A91870D842174E7D53EC5"
+               BlueprintName = "PureLayout"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SCIndexView.framework">
+               BuildableName = "PureLayout.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
