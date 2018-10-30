@@ -23,6 +23,10 @@
 
 @implementation AppRecordView
 
+- (void)dealloc {
+    NSLog(@"释放了 %@",NSStringFromClass(self.class));
+}
+
 - (void)updateWithPower:(float)power {
     [self.powerView updateAudioPower:power];
 }
@@ -47,7 +51,7 @@
     [self.imageRecord autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self withOffset:30];
     [self.imageRecord autoSetDimensionsToSize:_imageRecord.image.size];
     
-    CGSize powerSize = CGSizeMake(18, 56);
+    CGSize powerSize = CGSizeMake(40, 50);
     [self.powerView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.imageRecord];
     [self.powerView autoPinEdge:ALEdgeLeading toEdge:ALEdgeTrailing ofView:self.imageRecord withOffset:4];
     [self.powerView autoSetDimensionsToSize:powerSize];
@@ -88,7 +92,6 @@
         _lbContent.font = [UIFont systemFontOfSize:14];
         _lbContent.numberOfLines = 4;
         _lbContent.lineBreakMode = NSLineBreakByTruncatingMiddle;
-        _lbContent.text = @"i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you i like you ";
     }
     return _lbContent;
 }

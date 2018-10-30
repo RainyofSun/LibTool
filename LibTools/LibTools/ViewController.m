@@ -42,7 +42,7 @@
 //    [self popAnimationKit];
 //    [self SingleTimer];
 //    [self clearImg];
-    [self recordAnimation];
+//    [self recordAnimation];
 }
 
 - (void)popMenu {
@@ -104,6 +104,7 @@
 - (void)onFakeTimerTimeOut {
     dispatch_async(dispatch_get_main_queue(), ^{
         float fakePower = (float)(1+arc4random()%99)/100;
+        NSLog(@"fakePower %f",fakePower);
         [self.recordView updateWithPower:fakePower];
     });
 }

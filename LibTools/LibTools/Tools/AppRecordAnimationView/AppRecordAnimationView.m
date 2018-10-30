@@ -42,7 +42,8 @@
     CGFloat itemHeight  = 3;
     CGFloat itemPadding = 3.5;
     CGFloat maskPadding = itemHeight * viewCount + (viewCount - 1) * itemPadding;
-
+    NSLog(@"maskPadding %f",maskPadding);
+    
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, _originSize.height - maskPadding, _originSize.width, _originSize.height)];
     _maskLayer.path = path.CGPath;
     _recordAnimationImg.layer.mask = _maskLayer;
